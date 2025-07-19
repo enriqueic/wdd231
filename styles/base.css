@@ -279,7 +279,7 @@ social-section {
   object-fit: contain;
 }
 
-.sr-only {
+.accessibility {
   position: absolute;
   width: 1px;
   height: 1px;
