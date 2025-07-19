@@ -63,10 +63,8 @@ filterButtons.forEach(button => {
 
     filterButtons.forEach(btn => {
       btn.classList.remove("active");
-      btn.setAttribute("aria-pressed", "false");
     });
     button.classList.add("active");
-    button.setAttribute("aria-pressed", "true");
 
     const filter = button.dataset.filter;
     renderCourses(filter);
@@ -84,15 +82,12 @@ function init() {
   lastModifiedEl.textContent = `Last Modified: ${document.lastModified}`;
 
   hamburgerBtn.addEventListener("click", () => {
-    const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
-    hamburgerBtn.setAttribute("aria-expanded", String(!expanded));
     navMenu.classList.toggle("open");
   });
 
   document.addEventListener("click", (event) => {
     if (!navMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
       navMenu.classList.remove("open");
-      hamburgerBtn.setAttribute("aria-expanded", "false");
     }
   });
 }
