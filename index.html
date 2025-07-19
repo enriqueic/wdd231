@@ -7,6 +7,94 @@
     <title>Document</title>
 </head>
 <body>
-    
+    Hello world
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="WDD 231 project page with responsive navigation, dynamic course list, and semantic HTML." />
+  <meta name="author" content="Your Name" />
+  <title>WDD 231 Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <!-- Inline SVG logo -->
+      <svg width="48" height="48" viewBox="0 0 100 100" aria-labelledby="logoTitle" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title id="logoTitle">WDD 231 Logo</title>
+        <circle cx="50" cy="50" r="48" stroke="#e67e22" stroke-width="4" fill="#2c3e50" />
+        <text x="50%" y="55%" font-family="Roboto, sans-serif" font-weight="700" font-size="40" fill="#fff" text-anchor="middle" dominant-baseline="middle">WDD</text>
+      </svg>
+      <span class="author-name">Your Name</span>
+    </div>
+    <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <nav id="primary-navigation" role="navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="#" class="active" aria-current="page">Home</a></li>
+        <li><a href="chamber.html">Chamber</a></li>
+        <li><a href="final.html">Final</a></li>
+        <li><a href="https://www.example.com">External Link</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section id="about">
+      <h2>About This Course</h2>
+      <p>This project showcases semantic HTML, responsive design, dynamic JavaScript, and CSS best practices.</p>
+    </section>
+
+    <section id="certificate">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="filters">
+        <button data-filter="all" class="filter-btn active" aria-pressed="true">All Courses</button>
+        <button data-filter="WDD" class="filter-btn" aria-pressed="false">WDD Courses</button>
+        <button data-filter="CSE" class="filter-btn" aria-pressed="false">CSE Courses</button>
+      </div>
+      <ul id="course-list" aria-live="polite" aria-relevant="additions removals">
+        <!-- Courses added dynamically here -->
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out for collaboration or questions.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links" aria-label="Social media links">
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.372 0 0 5.373 0 12c0 5.303 3.438 9.8 8.207 11.387.6.11.793-.26.793-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.808 1.304 3.492.997.108-.775.42-1.304.763-1.605-2.665-.3-5.466-1.333-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.045.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.24 2.873.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.803 5.625-5.475 5.92.43.37.815 1.102.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .32.19.694.8.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.762 0 5-2.24 5-5v-14c0-2.76-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.3h-3v-5c0-1.103-.897-2-2-2s-2 .897-2 2v5h-3v-10h3v1.4c.734-1.273 2.324-1.9 3.672-1.4 1.713.63 2.328 2.573 2.328 4.6v5z"/></svg>
+      </a>
+      <!-- Add 1 or 2 more social icons below -->
+      <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.954 4.57a10.013 10.013 0 01-2.825.775 4.958 4.958 0 002.163-2.723 9.913 9.913 0 01-3.127 1.195 4.927 4.927 0 00-8.384 4.49c-4.093-.195-7.725-2.165-10.158-5.144a4.822 4.822 0 00-.666 2.475c0 1.708.869 3.214 2.188 4.099a4.904 4.904 0 01-2.228-.616v.061a4.93 4.93 0 003.946 4.827 4.996 4.996 0 01-2.224.084 4.936 4.936 0 004.604 3.417c-2.86 2.238-6.467 3.58-10.39 3.246a14.548 14.548 0 007.885 2.31c9.454 0 14.628-7.83 14.628-14.628 0-.22-.005-.438-.014-.652A10.345 10.345 0 0024 4.59z"/></svg>
+      </a>
+    </div>
+
+    <p>
+      &copy; <span id="currentYear"></span> Your Name, Your State or Country
+    </p>
+
+    <p id="lastModified" aria-live="polite" aria-atomic="true"></p>
+  </footer>
 </body>
 </html>
