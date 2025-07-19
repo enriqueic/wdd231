@@ -25,12 +25,6 @@ function renderCourses(filter = "all") {
     return course.category === filter;
   });
 
-  if (filtered.length === 0) {
-    courseListEl.innerHTML = "<li>No courses found.</li>";
-    document.getElementById("total-credits").textContent = "Total Credits: 0";
-    return;
-  }
-
   filtered.forEach(course => {
     const li = document.createElement("li");
     const a = document.createElement("a");
