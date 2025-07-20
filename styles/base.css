@@ -75,14 +75,14 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  color: #e67e22;
-  border-bottom-color: #e67e22;
+  color: #ce6810;
+  border-bottom-color: #ce6810;
   outline-offset: 2px;
 }
 
 nav a.active {
-  border-bottom-color: #e67e22;
-  color: #e67e22;
+  border-bottom-color: #ce6810;
+  color: #ce6810;
 }
 
 /* Main Grid Layout */
@@ -219,12 +219,12 @@ h2 {
 }
 
 #course-list li.completed {
-  color: #27ae60;
+  color: darkgreen;
   font-weight: 700;
 }
 
 #course-list li.not-completed {
-  color: #c0392b;
+  color: rgb(218, 9, 9)
 }
 
 #course-list li:last-child {
