@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // Dark mode toggle
+  const darkToggle = document.getElementById('dark-toggle');
+  darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+
+  // Hamburger menu toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('main-nav');
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('nav-closed');
+    nav.classList.toggle('nav-open');
+  });
+});
+
+
 // --------- WEATHER SECTION --------- //
 const weatherNow = document.getElementById('weather-now');
 const weatherForecast = document.getElementById('weather-forecast');
