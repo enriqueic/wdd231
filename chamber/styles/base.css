@@ -377,6 +377,77 @@ dialog button {
   border-radius: 5px;
 }
 
+/* --------- Dark Mode --------- */
+body.dark-mode {
+  background: #23272f;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #1a2233;
+}
+
+body.dark-mode .branding,
+body.dark-mode .site-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode #main-nav {
+  background: #2d3642;
+}
+
+body.dark-mode #main-nav a {
+  color: #e0e0e0;
+}
+
+body.dark-mode #main-nav a:hover,
+body.dark-mode #main-nav a.active {
+  background-color: #0580f3;
+  color: #fff;
+}
+
+body.dark-mode .info-col,
+body.dark-mode .home-section,
+body.dark-mode .company-highlight,
+body.dark-mode .highlight-cards,
+body.dark-mode .membership,
+body.dark-mode .membership-info {
+  background: #23272f;
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(35, 50, 75, 0.15);
+}
+
+body.dark-mode .panel-header {
+  background-color: #0580f3;
+  color: #fff;
+}
+
+body.dark-mode footer,
+body.dark-mode .footer-information {
+  background: #1a2233;
+  color: #e0e0e0;
+}
+
+body.dark-mode .footer-social a {
+  background: #23272f;
+  border-color: #0580f3;
+}
+
+body.dark-mode .footer-social a:hover {
+  background: #0580f3;
+  border-color: #0580f3;
+}
+
+body.dark-mode .btn-cta {
+  background: #0580f3;
+  border-color: #fff;
+  color: #fff;
+}
+
+body.dark-mode .btn-cta:hover {
+  background: #3f5a2d;
+}
+
 /* --------- Responsive Layouts --------- */
 @media (min-width: 600px) {
   header {
