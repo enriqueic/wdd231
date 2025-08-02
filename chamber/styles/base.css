@@ -496,6 +496,10 @@ body.dark-mode .btn-cta:hover {
     box-shadow: 0 2px 8px rgba(35, 50, 75, 0.07);
   }
 
+  .hero img{
+    max-height: 394px;
+  }
+
   .highlight-cards,
   .info-row {
     grid-template-columns: 1fr 1fr;
@@ -522,6 +526,10 @@ body.dark-mode .btn-cta:hover {
 
   .highlight-cards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .hero img{
+    max-height: 267px;
   }
 }
 
