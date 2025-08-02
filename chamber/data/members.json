@@ -1,0 +1,44 @@
+{
+  "members": [
+    {
+      "name": "Pacific Imports",
+      "image": "images/business1.jpg",
+      "address": "123 Ocean Ave, Tijuana, BC",
+      "phone": "+52 (664) 111-2222",
+      "website_url": "https://pacificimports.mx",
+      "membership_level": "Gold"
+    },
+    {
+      "name": "Mar y Sol Tours",
+      "image": "images/business2.jpg",
+      "address": "456 Beach Blvd, Ensenada, BC",
+      "phone": "+52 (664) 333-4444",
+      "website_url": "https://marysoltours.mx",
+      "membership_level": "Silver"
+    },
+    {
+      "name": "Ensenada Tech Hub",
+      "image": "images/business3.jpg",
+      "address": "789 Tech Park, Ensenada, BC",
+      "phone": "+52 (646) 555-6666",
+      "website_url": "https://ensetech.mx",
+      "membership_level": "Member"
+    },
+    {
+      "name": "Baja Culinary School",
+      "image": "images/business4.jpg",
+      "address": "321 Culinary St, Tijuana, BC",
+      "phone": "+52 (664) 777-8888",
+      "website_url": "https://bajaculinary.mx",
+      "membership_level": "Gold"
+    },
+    {
+      "name": "Tijuana Art Collective",
+      "image": "images/business5.jpg",
+      "address": "654 Art Ave, Tijuana, BC",
+      "phone": "+52 (664) 999-0000",
+      "website_url": "https://tijartcollective.mx",
+      "membership_level": "Silver"
+    }
+  ]
+}

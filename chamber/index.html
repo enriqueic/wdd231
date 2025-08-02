@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Baja California Chamber Home</title>
+  <meta name="description" content="Baja California Chamber of Commerce">
+  <meta name="author" content="Enrique Ibarra">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Baja California Chamber Home">
+  <meta property="og:description" content="Supporting Baja California businesses since 1950">
+  <meta property="og:image" content="https://enriqueic.github.io/chamber/images/hero-large.jpg">
+  <meta property="og:url" content="https://enriqueic.github.io/chamber/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+
+  <script src="scripts/chamber.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="branding">
+      <img src="images/favicon.webp" alt="Baja Chamber logo" class="logo" width="100" height="100">
+      <span class="site-title">Baja California Chamber of Commerce</span>
+    </div>
+
+    <div class="header-actions">
+      <nav id="main-nav" class="nav-closed" aria-label="Main navigation">
+        <ul>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+
+        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </nav>
+
+      <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <picture>
+      <source media="(min-width:1000px)" srcset="images/hero-large.webp" width="300" height="1200">
+      <source media="(min-width:700px)" srcset="images/hero-medium.webp" width="394" height="700">
+      <img src="images/hero-small.webp" alt="Scenic view of Baja California coastline" width="267" height="400">
+    </picture>
+    <div class="hero-overlay">
+      <a href="events.html" class="btn-cta">Join Us</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="home-section">
+      <h1>Home</h1>
+      <section class="info-row">
+        <article class="info-col events-panel">
+          <div class="panel-header">Events</div>
+          <div class="panel-content">
+          </div>
+        </article>
+        <article class="info-col weather-panel">
+          <div class="panel-header">Current Weather</div>
+          <div class="panel-content" id="weather-now">
+          </div>
+        </article>
+        <article class="info-col forecast-panel">
+          <div class="panel-header">Weather Forecast</div>
+          <div class="panel-content" id="weather-forecast">
+          </div>
+        </article>
+      </section>
+
+      <section class="company-highlight">
+      <div class="highlight-cards" id="highlight-cards"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-col footer-contact">
+      <strong>Baja California Chamber of Commerce</strong><br>
+      Av. Revolución 123, Tijuana, BC, Mexico<br>
+      <a href="mailto:info@bajachamber.mx">info@bajachamber.mx</a> | +52 (664) 123-4567
+    </div>
+    <div class="footer-col footer-social">
+      <a href="#" aria-label="YouTube">
+        <img src="images/YouTube.svg" alt="YouTube" width="28" height="28" />
+      </a>
+      <a href="#" aria-label="Twitter">
+        <img src="images/Twitter.svg" alt="Twitter" width="28" height="28" />
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <img src="images/LinkedIn.svg" alt="LinkedIn" width="28" height="28" />
+      </a>
+    </div>
+      <div class="footer-information">
+          <p>WDD231 Class Project</p>
+          <p>Enrique Ibarra</p>
+          <p>© <span id="currentyear"></span> Baja California Chamber of Commerce</p>
+          <p id="lastModified"></p>
+      </div>
+  </footer>
+</body>
+</html>
