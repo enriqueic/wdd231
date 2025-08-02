@@ -42,7 +42,8 @@ header {
   gap: 0.5em;
 }
 
-#nav-toggle, #dark-toggle {
+#nav-toggle,
+#dark-toggle {
   background: none;
   border: none;
   font-size: 2rem;
@@ -111,10 +112,12 @@ header {
     border-radius: 0;
     padding: 0;
   }
+
   #main-nav ul {
     flex-direction: row;
     gap: 1.5rem;
   }
+
   #nav-toggle {
     display: none !important;
   }
@@ -274,6 +277,7 @@ footer {
   padding-top: 2rem;
   font-size: 1rem;
 }
+
 .join-form input,
 .join-form select,
 .join-form textarea {
@@ -284,25 +288,32 @@ footer {
   border-radius: 5px;
   font-size: 1rem;
 }
+
 .join-form textarea {
   font-style: italic;
 }
+
 .join-form input:required {
   border-bottom: 6px solid red;
 }
+
 .join-form input:required:valid {
   border-bottom: 6px solid green;
 }
+
 .join-form select {
   height: 35px;
 }
+
 .join-form span {
   display: block;
   padding-bottom: 8px;
 }
+
 .join-form fieldset {
   border: none;
 }
+
 .membership {
   display: flex;
   flex-direction: column;
@@ -312,6 +323,7 @@ footer {
   border-radius: 5px;
   width: 100%;
 }
+
 .membership-info {
   display: grid;
   grid-template-columns: 1fr;
@@ -319,15 +331,18 @@ footer {
   padding: 10px;
   margin-bottom: 20px;
 }
+
 .membership h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
   text-align: center;
 }
+
 .membership p {
   font-size: 1rem;
   margin-bottom: 10px;
 }
+
 .membership button {
   display: block;
   font-size: 1.2rem;
@@ -335,23 +350,27 @@ footer {
   margin: 0 auto;
   margin-top: auto;
 }
+
 .membership-title {
   display: block;
   text-align: center;
   font-size: 1.5rem;
 }
+
 form button {
   margin: 0 15px 20px 15px;
   display: block;
   font-size: 1.5rem;
   padding: 10px 20px;
 }
+
 .form-directions {
   text-align: center;
   font-size: 1rem;
   margin-bottom: 20px;
   font-style: italic;
 }
+
 .join-form .timestamp {
   display: none;
 }
@@ -363,9 +382,11 @@ dialog {
   padding: 20px;
   border: solid 4px var(--prussian-blue);
 }
+
 ::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 dialog button {
   display: block;
   margin: 10px auto 0;
@@ -454,12 +475,14 @@ body.dark-mode .btn-cta:hover {
     flex-direction: row;
     gap: 6%;
   }
+
   .branding {
     flex-direction: row;
     justify-content: flex-start;
     gap: 3%;
     align-items: center;
   }
+
   .home-section {
     width: 100%;
     max-width: 1180px;
@@ -469,13 +492,16 @@ body.dark-mode .btn-cta:hover {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(35, 50, 75, 0.07);
   }
+
   .highlight-cards,
   .info-row {
     grid-template-columns: 1fr 1fr;
   }
+
   .info-row {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
   footer {
     display: flex;
     flex-wrap: wrap;
@@ -490,6 +516,7 @@ body.dark-mode .btn-cta:hover {
     min-width: 1050px;
     max-width: 1050px;
   }
+
   .highlight-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
