@@ -190,6 +190,9 @@ header {
   background-color: var(--prussian-blue);
   border-radius: 5px 5px 0 0;
   padding: 0.5em;
+  align-self: start;
+  width: 100%;     
+  display: block;   
 }
 
 /* --------- Company Highlight --------- */
