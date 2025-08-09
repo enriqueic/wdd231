@@ -17,11 +17,13 @@
   <meta property="og:url" content="https://enriqueic.github.io/chamber/join.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&text=aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ1234567890%21%2C-.%3A%26%40%2F%23%28%29&family=Roboto+Slab&text=aAbcdDeEfFghHiIJLmMnoPrRsStuUvwWxyz&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&text=aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ1234567890%21%2C-.%3A%26%40%2F%23%28%29&family=Roboto+Slab&text=aAbcdDeEfFghHiIJLmMnoPrRsStuUvwWxyz&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/join.css">
-    <script src="scripts/chamber.js" defer></script>
-    <script src="scripts/join.js" defer></script>
+  <link rel="stylesheet" href="styles/join.css">
+  <script src="scripts/chamber.js" defer></script>
+  <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -50,51 +52,54 @@
       <h1>Chamber of Commerce Join</h1>
       <form action="https://enriqueic.github.io/chamber/thankyou.html" method="get">
         <fieldset>
-                  <legend>Your Information</legend>
-                  <label>First Name <input type="text" name="first" required autocomplete="given-name"></label>
-                  <label>Last Name <input type="text" name="last" required autocomplete="family-name"></label>
-                  <label>Title <input type="text" name="title" required autocomplete="organization-title" pattern="[A-Za-z0-9 \-]{7,}"></label>
-                  <label>Email <input type="email" name="email" required autocomplete="email" placeholder="example@gmail.com"></label>
-                  <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label>
-          </fieldset>
-          <fieldset>
-                  <legend>Company Information</legend>
-                  <label>Organization <input type="text" name="organization" required autocomplete="organization"></label>
-                  <label>Select a Membership Level
-                      <select name="level" id="level" required>
-                          <option value="" disabled selected>Choose a Level &#9662;</option>
-                          <option value="np">Non Profit</option>
-                          <option value="1">Bronze Membership</option>
-                          <option value="2">Silver Membership</option>
-                          <option value="3">Gold Membership</option>
-                      </select>
-                  </label>
-                  <label>Description<textarea name="description"></textarea></label>
-              </fieldset>
-              <input type="hidden" name="timestamp" id="timestamp">
-              <input type="submit" value="Join">
+          <legend>Your Information</legend>
+          <label>First Name <input type="text" name="first" required autocomplete="given-name"></label>
+          <label>Last Name <input type="text" name="last" required autocomplete="family-name"></label>
+          <label>Title <input type="text" name="title" required autocomplete="organization-title"
+              pattern="[A-Za-z0-9 \-]{7,}"></label>
+          <label>Email <input type="email" name="email" required autocomplete="email"
+              placeholder="example@gmail.com"></label>
+          <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" placeholder="123-456-7890"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Company Information</legend>
+          <label>Organization <input type="text" name="organization" required autocomplete="organization"></label>
+          <label>Select a Membership Level
+            <select name="level" id="level" required>
+              <option value="" disabled selected>Choose a Level &#9662;</option>
+              <option value="np">Non Profit</option>
+              <option value="1">Bronze Membership</option>
+              <option value="2">Silver Membership</option>
+              <option value="3">Gold Membership</option>
+            </select>
+          </label>
+          <label>Description<textarea name="description"></textarea></label>
+        </fieldset>
+        <input type="hidden" name="timestamp" id="timestamp">
+        <input type="submit" value="Join">
       </form>
     </section>
-        <section>
-            <h2>Membership Level Info</h2>
-            <div class="cards">
-              <section class="card1">
-                <h3>Non Profit</h3>
-                <p><a href="#" data-modal="modal-np" class="card-info-link">Click for more information</a></p>
-              </section>
-              <section class="card2">
-                <h3>Bronze</h3>
-                <p><a href="#" data-modal="modal-bronze" class="card-info-link">Click for more information</a></p>
-              </section>
-              <section class="card3">
-                <h3>Silver</h3>
-                <p><a href="#" data-modal="modal-silver" class="card-info-link">Click for more information</a></p>
-              </section>
-              <section class="card4">
-                <h3>Gold</h3>
-                <p><a href="#" data-modal="modal-gold" class="card-info-link">Click for more information</a></p>
-              </section>
-            </div>
+    <section>
+      <h2>Membership Level Info</h2>
+      <div class="cards">
+        <section class="card1">
+          <h3>Non Profit</h3>
+          <p><a href="#" data-modal="modal-np" class="card-info-link">Click for more information</a></p>
+        </section>
+        <section class="card2">
+          <h3>Bronze</h3>
+          <p><a href="#" data-modal="modal-bronze" class="card-info-link">Click for more information</a></p>
+        </section>
+        <section class="card3">
+          <h3>Silver</h3>
+          <p><a href="#" data-modal="modal-silver" class="card-info-link">Click for more information</a></p>
+        </section>
+        <section class="card4">
+          <h3>Gold</h3>
+          <p><a href="#" data-modal="modal-gold" class="card-info-link">Click for more information</a></p>
+        </section>
+      </div>
     </section>
 
     <dialog id="modal-np">

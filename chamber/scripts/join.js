@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('.card-info-link').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
       const modalId = this.dataset.modal;
       const dialog = document.getElementById(modalId);
@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelectorAll('dialog [data-close]').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
       this.closest('dialog').close();
     });
   });
 
   document.querySelectorAll('dialog').forEach(dialog => {
-    dialog.addEventListener('keydown', function(e) {
+    dialog.addEventListener('keydown', function (e) {
       if (e.key === "Escape") {
         dialog.close();
       }
