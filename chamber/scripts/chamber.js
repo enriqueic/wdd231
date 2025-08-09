@@ -37,7 +37,7 @@ async function fetchWeather() {
     if (!res.ok) throw new Error('Weather fetch failed');
     const data = await res.json();
     weatherNow.innerHTML = `
-      <div style="display:flex;align-items:center;gap:10px;">
+      <div class="weather-row">
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}" width="48" height="48">
         <div>
           <strong>${Math.round(data.main.temp)}°C</strong><br>

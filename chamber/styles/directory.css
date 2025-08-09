@@ -1,0 +1,183 @@
+.gridList {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem 0;
+}
+.gridList button {
+  background: #acacac;
+  border: 1px solid var(--secondary, #23324b);
+  min-width: 6rem;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.gridList button.active,
+.gridList button:focus {
+  background: var(--baja-blue, #0580f3);
+  color: #fff;
+  outline: none;
+}
+
+/* --- Grid View --- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  gap: 1.2rem;
+  margin: 2px;
+}
+
+.cards section {
+  display: grid;
+  grid-template-columns: 110px auto;
+  grid-template-rows: 41px 48px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(35, 50, 75, 0.10);
+  width: 300px;
+  margin: 0 auto;
+  transition: box-shadow 0.2s;
+  min-height: 120px;
+  overflow: hidden;
+}
+
+.cards h3,
+.cards p {
+  background-color: #e4f5dc;
+  grid-column: 1/3;
+  text-align: center;
+  margin: 0;
+  padding: 0.3em 0.5em;
+}
+
+.cards p {
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.cards img {
+  margin: 5px;
+  align-self: center;
+  grid-row: 2/4;
+  grid-column: 1/2;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px; /* Keep if you want cards to have a different radius than global */
+  background: #eee;
+}
+
+.cards div {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2em;
+  padding-left: 0.5em;
+}
+
+.cards div p {
+  text-align: start;
+  padding: 2px 0;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.cards section a {
+  color: var(--baja-blue, #0580f3);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* --- List View --- */
+.cards.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cards.list section {
+  display: grid;
+  grid-template-columns: 90px 1fr 2fr;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(35, 50, 75, 0.10);
+}
+
+.cards.list section:nth-child(even) {
+  background-color: #e4f5dc;
+}
+
+.cards.list img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  margin: 0 1.5em 0 0;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eee;
+}
+
+.cards.list h3 {
+  grid-column: 2/3;
+  text-align: left;
+  margin: 0 0 0.2em 0;
+  font-size: 1.1rem;
+}
+
+.cards.list > section > p {
+  display: none;
+}
+
+.cards.list div {
+  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  text-align: left;
+  padding-left: 1em;
+}
+
+.cards.list div p {
+  margin: 0.1em 0;
+  font-size: 1rem;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+/* --- Responsive --- */
+@media screen and (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  }
+  .cards.list section {
+    padding: 0.75rem 2rem;
+  }
+}
+
+/* --- Dark Mode --- */
+body.dark-mode .cards section,
+body.dark-mode .cards.list section {
+  background: #23272f;
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(35, 50, 75, 0.18);
+}
+body.dark-mode .cards h3,
+body.dark-mode .cards p,
+body.dark-mode .cards.list section:nth-child(even) {
+  background-color: #2d3642;
+  color: #e0e0e0;
+}
+body.dark-mode .cards.list section:nth-child(even) {
+  background-color: #23324b;
+}
