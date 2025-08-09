@@ -43,28 +43,35 @@ main .cards section:hover {
   border-color: var(--primary, #0580f3);
 }
 
-.card1 h3, .card1 h2 {
+.card1 h3,
+.card1 h2 {
   background-color: #337ca0;
   animation: 4s linear 375ms shimmer 2;
   color: #fff;
   border-radius: 8px;
   padding: 0.3em 0;
 }
-.card2 h3, .card2 h2 {
+
+.card2 h3,
+.card2 h2 {
   background-color: #cd7f32;
   animation: 4s linear 250ms shimmer 2;
   color: #fff;
   border-radius: 8px;
   padding: 0.3em 0;
 }
-.card3 h3, .card3 h2 {
+
+.card3 h3,
+.card3 h2 {
   background-color: #c0c0c0;
   animation: 4s linear 125ms shimmer 2;
   color: #23324b;
   border-radius: 8px;
   padding: 0.3em 0;
 }
-.card4 h3, .card4 h2 {
+
+.card4 h3,
+.card4 h2 {
   background-color: #d4af37;
   animation: 4s linear shimmer 2;
   color: #23324b;
@@ -76,72 +83,94 @@ main .cards section:hover {
   from {
     background-image: linear-gradient(65deg, #fff0, 0%, #fffa, 5%, #fff0);
   }
+
   1.25% {
     background-image: linear-gradient(65deg, #fff0, 5%, #fffa, 10%, #fff0);
   }
+
   2.5% {
     background-image: linear-gradient(65deg, #fff0, 10%, #fffa, 15%, #fff0);
   }
+
   3.75% {
     background-image: linear-gradient(65deg, #fff0, 15%, #fffa, 20%, #fff0);
   }
+
   5% {
     background-image: linear-gradient(65deg, #fff0, 20%, #fffa, 25%, #fff0);
   }
+
   6.25% {
     background-image: linear-gradient(65deg, #fff0, 25%, #fffa, 30%, #fff0);
   }
+
   7.5% {
     background-image: linear-gradient(65deg, #fff0, 30%, #fffa, 35%, #fff0);
   }
+
   8.75% {
     background-image: linear-gradient(65deg, #fff0, 35%, #fffa, 40%, #fff0);
   }
+
   10% {
     background-image: linear-gradient(65deg, #fff0, 40%, #fffa, 45%, #fff0);
   }
+
   11.25% {
     background-image: linear-gradient(65deg, #fff0, 45%, #fffa, 50%, #fff0);
   }
+
   12.5% {
     background-image: linear-gradient(65deg, #fff0, 50%, #fffa, 55%, #fff0);
   }
+
   13.75% {
     background-image: linear-gradient(65deg, #fff0, 55%, #fffa, 60%, #fff0);
   }
+
   15% {
     background-image: linear-gradient(65deg, #fff0, 60%, #fffa, 65%, #fff0);
   }
+
   16.25% {
     background-image: linear-gradient(65deg, #fff0, 65%, #fffa, 70%, #fff0);
   }
+
   17.5% {
     background-image: linear-gradient(65deg, #fff0, 70%, #fffa, 75%, #fff0);
   }
+
   18.75% {
     background-image: linear-gradient(65deg, #fff0, 75%, #fffa, 80%, #fff0);
   }
+
   20% {
     background-image: linear-gradient(65deg, #fff0, 80%, #fffa, 85%, #fff0);
   }
+
   21.25% {
     background-image: linear-gradient(65deg, #fff0, 85%, #fffa, 90%, #fff0);
   }
+
   22.5% {
     background-image: linear-gradient(65deg, #fff0, 90%, #fffa, 95%, #fff0);
   }
+
   23.75% {
     background-image: linear-gradient(65deg, #fff0, 95%, #fffa, 100%, #fff0);
   }
+
   25% {
     background-image: linear-gradient(65deg, #fff0, #fff0);
   }
+
   to {
     background-image: linear-gradient(65deg, #fff0, #fff0);
   }
 }
 
-main .cards h3, main .cards h2 {
+main .cards h3,
+main .cards h2 {
   margin: 0 0 0.3em 0;
   font-size: 1.15rem;
   font-weight: 600;
@@ -203,17 +232,20 @@ dialog button {
     justify-content: center;
     gap: 2.5rem;
   }
+
   main form {
     max-width: 400px;
     min-width: 260px;
     width: 100%;
     margin: 2.5rem 0 0 0;
   }
+
   main .cards {
     margin: 2.5rem 0 0 0;
     max-width: 700px;
     align-items: flex-start;
   }
+
   main .cards section {
     min-width: 200px;
     max-width: 220px;
