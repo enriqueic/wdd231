@@ -224,6 +224,11 @@ dialog button {
   font-style: italic;
 }
 
+fieldset{
+  padding: 0.5rem;
+  padding-bottom: 1/3rem;
+}
+
 @media (min-width: 900px) {
   main {
     display: flex;
@@ -238,6 +243,7 @@ dialog button {
     min-width: 260px;
     width: 100%;
     margin: 2.5rem 0 0 0;
+    padding: 0.5rem;
   }
 
   main .cards {
