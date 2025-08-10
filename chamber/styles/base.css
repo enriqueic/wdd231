@@ -295,7 +295,7 @@ form input[type="submit"] {
   padding: 10px 20px;
   border-radius: 5px;
   background: var(--primary);
-  color: #fff;
+  color: black;
   border: none;
   cursor: pointer;
 }
