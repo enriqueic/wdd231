@@ -32,8 +32,10 @@ img {
 
 /* --------- Header --------- */
 header {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   background: var(--primary);
   padding: 10px;
@@ -58,11 +60,13 @@ header {
 
 #nav-toggle,
 #dark-toggle {
+  font-size: 2rem;
   background: none;
   border: none;
-  font-size: 2rem;
   color: var(--secondary);
   cursor: pointer;
+  padding: 0.5rem;
+  display: block;
 }
 
 article h1,
