@@ -10,7 +10,7 @@
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/join.css">
-
+  <script src="scripts/thankyou.js" defer></script>
 </head>
 
 <body>
@@ -34,20 +34,12 @@
   </header>
 
   <main>
-    <section class="thankyou-section">
-      <h1>Thank You for Joining!</h1>
-      <p>We appreciate your interest in the Baja California Chamber of Commerce. Here is the information you submitted:
-      </p>
-      <div class="thankyou-info">
-        <p><strong>First Name:</strong> <span id="firstName"></span></p>
-        <p><strong>Last Name:</strong> <span id="lastName"></span></p>
-        <p><strong>Email:</strong> <span id="email"></span></p>
-        <p><strong>Phone:</strong> <span id="phone"></span></p>
-        <p><strong>Organization:</strong> <span id="organization"></span></p>
-        <p><strong>Date Submitted:</strong> <span id="timestamp"></span></p>
+    <div class="container-join">
+      <div class="container-in-main">
+        <h1>Thank you!</h1>
+        <div id="results"></div>
       </div>
-      <a href="index.html" class="btn-cta">Return Home</a>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">
