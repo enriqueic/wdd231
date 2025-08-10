@@ -226,7 +226,7 @@ dialog button {
 
 fieldset{
   padding: 0.5rem;
-  padding-bottom: 1/3rem;
+  padding-bottom: 0.3rem;
 }
 
 @media (min-width: 900px) {
