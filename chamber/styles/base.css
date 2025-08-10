@@ -65,6 +65,13 @@ header {
   cursor: pointer;
 }
 
+article h1,
+aside h1,
+nav h1,
+section h1 {
+  font-size: 2em;
+}
+
 /* --------- Navigation --------- */
 #main-nav {
   display: none;

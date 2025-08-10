@@ -36,17 +36,23 @@ async function fetchWeather() {
     const res = await fetch(urlNow);
     if (!res.ok) throw new Error('Weather fetch failed');
     const data = await res.json();
-    weatherNow.innerHTML = `
-      <div class="weather-row">
-        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}" width="48" height="48">
-        <div>
-          <strong>${Math.round(data.main.temp)}°C</strong><br>
-          <span style="text-transform:capitalize">${data.weather[0].description}</span>
+
+    if (weatherNow) {
+      weatherNow.innerHTML = `
+        <div class="weather-row">
+          <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}" width="48" height="48">
+          <div>
+            <strong>${Math.round(data.main.temp)}°C</strong><br>
+            <span style="text-transform:capitalize">${data.weather[0].description}</span>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    }
   } catch (e) {
-    weatherNow.textContent = "Weather unavailable";
+    if (weatherNow) {
+      weatherNow.textContent = "Weather unavailable";
+    }
+    console.warn("Weather fetch error:", e);
   }
 
   // Forecast
@@ -64,14 +70,19 @@ async function fetchWeather() {
     });
 
     const dayKeys = Object.keys(days).slice(0, 3);
-    weatherForecast.innerHTML = dayKeys.map((day, i) => {
-      const temps = days[day].map(f => f.main.temp_max);
-      const max = Math.round(Math.max(...temps));
-      const min = Math.round(Math.min(...temps));
-      return `<div><strong>${i === 0 ? 'Today' : day}:</strong> ${min}°C / ${max}°C</div>`;
-    }).join('');
+    if (weatherForecast) {
+      weatherForecast.innerHTML = dayKeys.map((day, i) => {
+        const temps = days[day].map(f => f.main.temp_max);
+        const max = Math.round(Math.max(...temps));
+        const min = Math.round(Math.min(...temps));
+        return `<div><strong>${i === 0 ? 'Today' : day}:</strong> ${min}°C / ${max}°C</div>`;
+      }).join('');
+    }
   } catch (e) {
-    weatherForecast.textContent = "Forecast unavailable";
+    if (weatherForecast) {
+      weatherForecast.textContent = "Forecast unavailable";
+    }
+    console.warn("Forecast fetch error:", e);
   }
 }
 fetchWeather();
@@ -109,6 +120,7 @@ async function fetchSpotlights() {
     `).join('');
   } catch (e) {
     container.innerHTML = "<p>Spotlights unavailable.</p>";
+    console.warn("Spotlight fetch error:", e);
   }
 }
 fetchSpotlights();
@@ -118,15 +130,18 @@ const lastModified = document.querySelector("#lastModified");
 
 const today = new Date();
 
-currentyear.innerHTML = `${today.getFullYear()}`;
+if (currentyear) {
+  currentyear.innerHTML = `${today.getFullYear()}`;
+}
 
 let lastModification = new Date(document.lastModified);
 
 const month = String(lastModification.getMonth() + 1).padStart(2, '0');
 const day = String(lastModification.getDate()).padStart(2, '0');
-
 const hours = String(lastModification.getHours()).padStart(2, '0');
 const minutes = String(lastModification.getMinutes()).padStart(2, '0');
 const seconds = String(lastModification.getSeconds()).padStart(2, '0');
 
-lastModified.innerHTML = `Last modification: ${day}/${month}/${lastModification.getFullYear()} ${hours}:${minutes}:${seconds}`;
+if (lastModified) {
+  lastModified.innerHTML = `Last modification: ${day}/${month}/${lastModification.getFullYear()} ${hours}:${minutes}:${seconds}`;
+}
