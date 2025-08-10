@@ -1,3 +1,11 @@
+h1, h2{
+  text-align: center;
+}
+
+h2{
+  padding: 1rem;
+}
+
 .gridList {
   display: flex;
   justify-content: center;
@@ -155,16 +163,6 @@
   border: none;
 }
 
-/* --- Responsive --- */
-@media screen and (min-width: 700px) {
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
-  }
-  .cards.list section {
-    padding: 0.75rem 2rem;
-  }
-}
-
 /* --- Dark Mode --- */
 body.dark-mode .cards section,
 body.dark-mode .cards.list section {
@@ -181,3 +179,18 @@ body.dark-mode .cards.list section:nth-child(even) {
 body.dark-mode .cards.list section:nth-child(even) {
   background-color: #23324b;
 }
+
+/* --- Responsive --- */
+@media screen and (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  }
+  .cards.list section {
+    padding: 0.75rem 2rem;
+  }
+  h1{
+    text-align: left;
+    margin-left: 1rem;
+  }
+}
+
