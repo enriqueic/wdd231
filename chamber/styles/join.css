@@ -54,7 +54,7 @@ main .cards section:hover {
 
 .card2 h3,
 .card2 h2 {
-  background-color: #cd7f32;
+  background-color: #884c10d0;
   animation: 4s linear 250ms shimmer 2;
   color: #fff;
   border-radius: 8px;
@@ -185,7 +185,7 @@ main .cards p {
 }
 
 main .cards a {
-  color: var(--primary, #0580f3);
+  color: black;
   text-decoration: underline;
   cursor: pointer;
   font-size: 0.98em;

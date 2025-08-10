@@ -26,7 +26,7 @@ h2{
 .gridList button.active,
 .gridList button:focus {
   background: var(--baja-blue, #0580f3);
-  color: #fff;
+  color: black;
   outline: none;
 }
 
@@ -96,7 +96,7 @@ h2{
 }
 
 .cards section a {
-  color: var(--baja-blue, #0580f3);
+  color: var(--baja-blue, #1f0eb1);
   text-decoration: underline;
   word-break: break-all;
 }

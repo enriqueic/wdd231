@@ -1,7 +1,7 @@
 /* --------- Variables --------- */
 :root {
-  --primary: #0580f3;
-  --secondary: #23324b;
+  --primary:  		#76bfc5;
+  --secondary: black;
   --accent: #3f5a2d;
   --bg-light: #fff;
   --bg-dark: #23272f;
@@ -111,8 +111,6 @@ section h1 {
 
 #main-nav a.active,
 #main-nav a:hover {
-  background: var(--primary);
-  color: #fff;
   font-weight: bold;
 }
 
