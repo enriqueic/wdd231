@@ -6,10 +6,10 @@ const lastName = params.get('last');
 const title = params.get('title');
 const phone = params.get('phone');
 const email = params.get('email');
-const orgName = params.get('org-name');
-const orgDesc = params.get('org-desc');
+const orgName = params.get('organization');
+const orgDesc = params.get('description');
+const membership = params.get('level');
 const timeStamp = params.get('timestamp');
-const membership = params.get('membership');
 
 
 const results = document.querySelector("#results");
