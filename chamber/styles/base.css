@@ -112,6 +112,7 @@ section h1 {
 #main-nav a.active,
 #main-nav a:hover {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /* --------- Hero Section --------- */
