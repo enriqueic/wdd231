@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Discover Baja California | Chamber of Commerce</title>
+  <meta name="description" content="Discover the best of Baja California.">
+  <meta name="author" content="Enrique Ibarra">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/directory.css">
+  <link rel="stylesheet" href="styles/discover.css">
+  <script src="scripts/chamber.js" defer></script>
+  <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+  <header class="header">
+        <div class="branding">
+      <img src="images/favicon.webp" alt="Baja Chamber logo" class="logo" width="100" height="100">
+      <span class="site-title">Baja California Chamber of Commerce</span>
+    </div>
+
+    <div class="header-actions">
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+      </nav>
+      <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main class="discover-main">
+    <aside id="visit-message" class="discover-sidebar"></aside>
+    <section id="discoverGrid" class="cards">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-col footer-contact">
+      <strong>Baja California Chamber of Commerce</strong><br>
+      Av. Revolución 123, Tijuana, BC, Mexico<br>
+      info@bajachamber.mx | +52 (664) 123-4567
+    </div>
+    <div class="footer-col footer-social">
+      <a href="#" aria-label="YouTube">
+        <img src="images/youtube.svg" alt="YouTube" width="28" height="28" />
+      </a>
+      <a href="#" aria-label="Twitter">
+        <img src="images/twitter.svg" alt="Twitter" width="28" height="28" />
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn" width="28" height="28" />
+      </a>
+    </div>
+    <div class="footer-information">
+      <p>WDD231 Class Project</p>
+      <p>Enrique Ibarra</p>
+      <p>©<span id="currentyear"></span> Baja California Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>

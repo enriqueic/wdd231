@@ -1,0 +1,58 @@
+[
+  {
+    "title": "CECUT",
+    "image": "images/cecut.webp",
+    "address": "Paseo de los Héroes 9350, Zona Urbana Río Tijuana, Tijuana",
+    "description": "Tijuana's cultural center with art exhibitions and performances. Home to an IMAX Dome theater",
+    "link": "https://www.cecut.gob.mx/t"
+  },
+  {
+    "title": "Parque de la Amistad",
+    "image": "images/parqueamistad.webp",
+    "address": "Av. Paseo Ensenada, Otay Constituyentes, Tijuana",
+    "description": "A beautiful park in Tijuana, symbolizing friendship and unity with the United States.",
+    "link": "https://simpatt.tijuana.gob.mx/parquedelaamistad.aspx"
+  },
+  {
+    "title": "Popotla Fishing Village",
+    "image": "images/popotla.webp",
+    "address": "Tijuana–Ensenada Highway, 33.5 km, Popotla, Rosarito",
+    "description": "A rustic seaside village. Famous for its ocean-to-table experience.",
+    "link": "https://www.gypsysols.com/popotla-bajas-secret-fishing-village/"
+  },
+  {
+    "title": "Baja Beach Fest",
+    "image": "images/bajafest.webp",
+    "address": "Boulevard Benito Juárez, Zona Centro, Rosarito",
+    "description": "An annual three-day music festival held on the sands of Rosarito.",
+    "link": "https://bajabeachfest.com/"
+  },
+  {
+    "title": "Valle de Guadalupe",
+    "image": "images/guadalupe.webp",
+    "address": "Valle de Guadalupe, Ensenada",
+    "description": "Mexico's premier vineyards.",
+    "link": "https://en.wikipedia.org/wiki/Valle_de_Guadalupe"
+  },
+  {
+    "title": "La Bufadora",
+    "image": "images/bufadora.webp",
+    "address": "La Bufadora, Ensenada",
+    "description": "A famous marine geyser and scenic viewpoint.",
+    "link": "https://en.wikipedia.org/wiki/La_Bufadora"
+  },
+  {
+    "title": "Sierra de San Pedro Mártir",
+    "image": "images/sanpedro.webp",
+    "address": "Parque Nacional Sierra de San Pedro Mártir, Ensenada",
+    "description": "A majestic mountain range with forests, wildlife, and Mexico’s premier astronomical observatory.",
+    "link": "https://es.wikipedia.org/wiki/Parque_nacional_Sierra_de_San_Pedro_M%C3%A1rtir"
+  },
+  {
+    "title": "Colorado River Delta",
+    "image": "images/colorado.webp",
+    "address": "Reserva de la Biosfera, Mexicali",
+    "description": "A UNESCO-designated biosphere reserve protecting wetlands, desert, and marine ecosystems.",
+    "link": "https://es.wikipedia.org/wiki/Reserva_de_la_Biosfera_Alto_Golfo_de_California_y_Delta_del_R%C3%ADo_Colorado"
+  }
+]
