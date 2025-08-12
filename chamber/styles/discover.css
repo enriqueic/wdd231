@@ -2,6 +2,7 @@
 .discover-main {
   display: grid;
   grid-template-areas:
+    "title"
     "sidebar"
     "gallery";
   grid-template-columns: 1fr;
@@ -26,6 +27,10 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+h1{
+  text-align: center;
 }
 
 /* --------- Gallery Grid --------- */
