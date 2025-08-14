@@ -201,5 +201,5 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchShrinkflationReddit();
     fetchShrinkflationNews();
     injectModals();
-    setupModalEvents();
+    setupModalEvents()
 });
