@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shrinkflation Watch – Statistics</title>
+    <meta name="description" content="Track, visualize, and report shrinkflation in your favorite products."/>
+    <meta name="author" content="Enrique Ibarra" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Statistics - Shrinkflation Watch">
+    <meta property="og:description" content="Visualize shrinkflation trends and statistics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://enriqueic.github.io/finalproject/statistics.html">
+    <meta property="og:image" content="https://enriqueic.github.io/finalproject/images/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/statistics.css">
+    <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/statistics.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Shrinkflation Watch</h1>
+        <div class="navigation-actions">
+            <nav>
+                <a href="index.html" aria-label="Home page">Home</a>
+                <a href="products.html" aria-label="Products page">Products</a>
+                <a href="statistics.html" class="active" aria-label="Statistics page">Statistics</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Statistics & News</h1>
+
+        <section id="news-section">
+            <h2>Latest Shrinkflation News</h2>
+            <div id="news-area">
+                <!-- News headlines will be loaded here -->
+            </div>
+        </section>
+
+        <section id="social-section">
+            <h2>Shrinkflation on Social Media</h2>
+            <div id="social-area">
+                <!-- Social media posts will be loaded here -->
+            </div>
+        </section>
+
+        <section id="official-stats-section">
+            <h2>Official Statistics</h2>
+
+            <label for="country-select">Select Country:</label>
+            <select id="country-select"></select>
+
+            <button id="load-btn">Load Stats</button>
+            <div id="official-stats-area">
+                <!-- Official statistics will be loaded here -->
+            </div>
+
+            <div id="economic-info">
+                <button id="about-world-bank-btn">About the World Bank <img src="images/worldbank.png" loading="lazy"
+                        width="32" height="24"></button>
+                <button id="about-inflation-btn">About Inflation</button>
+            </div>
+
+            <div id="modal-container"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <strong>Shrinkflation Watch</strong><br>
+            <p>WDD231 Class Project <br> Enrique Ibarra</p>
+
+        </div>
+        <div class="footer-social">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub profile">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                    width="24" height="24">
+            </a>
+        </div>
+        <div class="footer-information">
+            <p>&copy; <span id="year"></span> Shrinkflation Watch</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

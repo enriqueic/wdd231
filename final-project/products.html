@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shrinkflation Watch – Products</title>
+    <meta name="description" content="Track, visualize, and report shrinkflation in your favorite products."/>
+    <meta name="author" content="Enrique Ibarra" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Products - Shrinkflation Watch">
+    <meta property="og:description" content="Browse and track products affected by shrinkflation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://enriqueic.github.io/finalproject/products.html">
+    <meta property="og:image" content="https://enriqueic.github.io/finalproject/images/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/products.css">
+    <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/products.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Shrinkflation Watch</h1>
+        <div class="navigation-actions">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="statistics.html">Statistics</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Products Affected by Shrinkflation</h2>
+            <div id="track-toggle" class="toggle-container">
+                <button id="track-price" class="toggle-btn active">Track Price</button>
+                <button id="track-weight" class="toggle-btn">Track Weight</button>
+            </div>
+            <div id="loading-spinner" style="display:none;">
+                <div class="spinner"></div>
+            </div>
+            <div id="product-list">
+                <!-- Product cards will be rendered here by JS -->
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <strong>Shrinkflation Watch</strong><br>
+            <p>WDD231 Class Project</p>
+            <p>Enrique Ibarra</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                    width="24" height="24">
+            </a>
+        </div>
+        <div class="footer-information">
+            <p>&copy; <span id="year"></span> Shrinkflation Watch</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
