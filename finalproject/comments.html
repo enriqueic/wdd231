@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shrinkflation Sense – Comments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdate.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Shrinkflation Watch</h1>
+        <div class="navigation-actions">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="statistics.html">Statistics</a>
+                <a href="comments.html" class="active">Comments</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Comments & Reports</h2>
+            <form id="comment-form">
+                <label for="user">Name (optional): <input type="text" id="user" name="user"></label><br>
+                <label for="comment">Comment or Report:<br>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                </label><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+
+        <section>
+            <h2>User Comments</h2>
+            <div id="comments-list">
+            <!-- Comments will be rendered here by JS -->
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-col footer-contact">
+            <strong>Shrinkflation Watch</strong><br>
+            <p>WDD231 Class Project <br> Enrique Ibarra</p>
+        </div>
+        <div class="footer-col footer-social">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" height="24" style="vertical-align:middle;filter:grayscale(1);opacity:.7;">
+            </a>
+        </div>
+        <div class="footer-information">
+            <p>&copy; <span id="year"></span> Shrinkflation Watch</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
