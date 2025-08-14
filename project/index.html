@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shrinkflation Watch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/getdate.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="branding">
+            <h1>Shrinkflation Watch</h1>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Purpose</h2>
+            <p>Shrinkflation Watch helps you track, visualize, inform yourself, and report changes in product sizes and prices.</p>
+            <ul>
+                <li><b>Browse Products:</b> See real-world examples of shrinkflation. Save your items and make your own personalized watch-list!</li>
+                <li><b>Visualize Trends:</b> Explore statistics and charts about product changes over time.</li>
+                <li><b>Share Your Experience:</b> Report shrinkflation or leave comments for the community.</li>
+            </ul>
+            <div class="cta-buttons">
+                <a href="products.html" class="cta">Browse Products</a>
+                <a href="statistics.html" class="cta alt">See Statistics</a>
+                <a href="comments.html" class="cta">Report/Comment</a>
+            </div>
+        </section>
+        <div class="section-grid">
+
+            <section class="scenarios">
+                <h2>Scenarios</h2>
+                <ul>
+                    <li>I have learned about shrinkflation recently. Where can I find relevant news or examples of it?</li>
+                    <li>How can I compare the price and size changes of my favorite products over time?</li>
+                    <li>How can I check if a product I buy has been affected by shrinkflation?</li>
+                    <li>How do I report a new case of shrinkflation I have noticed?</li>
+                </ul>
+            </section>
+
+            <section class="typography">
+                <h2>Typography</h2>
+                <ul>
+                    <li>
+                        <b>Roboto Slab</b> – Used for all headings (h1, h2, h3, etc.), in bold.
+                    </li>
+                    <li>
+                        <b>Roboto</b> – Used for body text, navigation, and buttons.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="color-scheme">
+                <h2>Color Scheme</h2>
+                <ul>
+                    <li>
+                        <span style="display:inline-block;width:1.5em;height:1.5em;background:#0d47a1;border-radius:4px;margin-right:0.5em;vertical-align:middle;"></span>
+                        <b>Primary (#0d47a1):</b> Used for headings, navigation, and call-to-action buttons.
+                    </li>
+                    <li>
+                        <span style="display:inline-block;width:1.5em;height:1.5em;background:#ffb300;border-radius:4px;margin-right:0.5em;vertical-align:middle;"></span>
+                        <b>Secondary (#ffb300):</b> Used for highlights, accents, and alternate buttons.
+                    </li>
+                    <li>
+                        <span style="display:inline-block;width:1.5em;height:1.5em;background:#f7fbff;border-radius:4px;margin-right:0.5em;vertical-align:middle;border:1px solid #b3d8f8;"></span>
+                        <b>Background (#f7fbff):</b> Used for the main page background.
+                    </li>
+                    <li>
+                        <span style="display:inline-block;width:1.5em;height:1.5em;background:#23324b;border-radius:4px;margin-right:0.5em;vertical-align:middle;"></span>
+                        <b>Text (#23324b):</b> Used for body text.
+                    </li>
+                </ul>
+                <p>These colors are defined as CSS variables in the base.css file's :root section.</p>
+            </section>
+            <section class="wireframes">
+                <h2>Wireframes</h2>
+                <ul>
+                    <li>
+                        <b>Desktop:</b><br>
+                        <a href="images/diagram-desktop.png" target="_blank">
+                            <img src="images/diagram-desktop.png" alt="Desktop wireframe for Shrinkflation Watch" style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);margin-bottom:1em;">
+                        </a>
+                    </li>
+                    <li>
+                        <b>Mobile:</b><br>
+                        <a href="images/diagram-mobile.png" target="_blank">
+                            <img src="images/diagram-mobile.png" alt="Mobile wireframe for Shrinkflation Watch" style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-col footer-contact">
+            <p>WDD231 Class Project <br> Enrique Ibarra</p>
+        </div>
+        <div class="footer-col footer-social">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" height="24" style="vertical-align:middle;filter:grayscale(1);opacity:.7;">
+            </a>
+        </div>
+        <div class="footer-information">
+            <p>&copy; <span id="year"></span> Shrinkflation Watch</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <script src="scripts/getdate.js"></script>
+</body>
+
+</html>
