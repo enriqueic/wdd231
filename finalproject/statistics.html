@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/statistics.css">
     <script src="scripts/getdate.js" defer></script>
     <script src="scripts/statistics.js" defer></script>
 </head>
@@ -27,7 +28,6 @@
                 <a href="index.html" aria-label="Home page">Home</a>
                 <a href="products.html" aria-label="Products page">Products</a>
                 <a href="statistics.html" class="active" aria-label="Statistics page">Statistics</a>
-                <a href="comments.html" aria-label="Comments page">Comments</a>
             </nav>
         </div>
     </header>
@@ -51,9 +51,21 @@
 
         <section id="official-stats-section">
             <h2>Official Statistics</h2>
+
+            <label for="country-select">Select Country:</label>
+            <select id="country-select"></select>
+
+            <button id="load-btn">Load Stats</button>
             <div id="official-stats-area">
                 <!-- Official statistics will be loaded here -->
             </div>
+
+            <div id="economic-info">
+                <button id="about-world-bank-btn">About the World Bank <img src="images/worldbank.png" loading="lazy" width="32" height="24"></button>
+                <button id="about-inflation-btn">About Inflation</button>
+            </div>
+
+            <div id="modal-container"></div>
         </section>
     </main>
 

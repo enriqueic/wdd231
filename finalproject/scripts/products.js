@@ -2,8 +2,8 @@ const productList = document.getElementById('product-list');
 const trackPriceBtn = document.getElementById('track-price');
 const trackWeightBtn = document.getElementById('track-weight');
 
-let trackingMode = localStorage.getItem('trackingMode') || 'price'; // 'price' or 'weight'
-let lastProducts = []; // Store last loaded products
+let trackingMode = 'price';
+localStorage.setItem('trackingMode', trackingMode);
 
 // Get/set favorites from localStorage (always as strings)
 function getFavorites() {
@@ -53,7 +53,7 @@ function updateProductHistory(products) {
     setProductHistory(history);
 }
 
-// Utility: Shuffle an array in-place (Fisher-Yates)
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -61,7 +61,6 @@ function shuffleArray(array) {
     }
 }
 
-// Helper to fetch a single Open Food Facts product by code
 function fetchOpenFoodFactsProduct(code) {
     return fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
         .then(res => res.json())
@@ -81,7 +80,6 @@ function fetchOpenFoodFactsProduct(code) {
         .catch(() => null);
 }
 
-// Helper to fetch a single Fake Store product by id
 function fetchFakeStoreProduct(id) {
     return fetch(`https://fakestoreapi.com/products/${id}`)
         .then(res => res.json())
@@ -95,7 +93,6 @@ function fetchFakeStoreProduct(id) {
         .catch(() => null);
 }
 
-// Render products and favorite buttons, including change count and history
 function renderProducts(products, displayLimit = 8) {
     const favorites = getFavorites().map(String);
     const history = getProductHistory();
@@ -115,7 +112,7 @@ function renderProducts(products, displayLimit = 8) {
     // Shuffle non-favorites
     shuffleArray(nonFavProducts);
 
-    // Combine: favorites first, then shuffled non-favorites (limit total to displayLimit or all favorites)
+    // Combine: favorites first, then shuffled non-favorites
     const combined = [...favProducts, ...nonFavProducts].slice(0, Math.max(displayLimit, favProducts.length));
 
     productList.innerHTML = combined.map(product => {
@@ -160,14 +157,14 @@ function renderProducts(products, displayLimit = 8) {
     }).join('');
 }
 
-// Fetch products from the selected API, always random except favorites (which are always included)
+// Fetch products, always random except favorites (which are always included)
 
 function fetchAndRenderProducts() {
     const displayLimit = 8;
     const favorites = getFavorites().map(String);
 
     showSpinner();
-    productList.innerHTML = ""; // Optionally clear products while loading
+    productList.innerHTML = "";
 
     if (trackingMode === 'price') {
         fetch('https://fakestoreapi.com/products')
@@ -209,7 +206,7 @@ function fetchAndRenderProducts() {
             });
     } else {
         // Use a random page for more variety
-        const randomPage = Math.floor(Math.random() * 20) + 1; // Adjust max as needed
+        const randomPage = Math.floor(Math.random() * 20) + 1;
         fetch(`https://world.openfoodfacts.org/category/snacks.json?page_size=20&page=${randomPage}`)
             .then(res => res.json())
             .then(async data => {
@@ -294,7 +291,6 @@ function hideSpinner() {
     document.getElementById('loading-spinner').style.display = 'none';
 }
 
-// Initial load
 if (trackingMode === 'price') {
     trackPriceBtn.classList.add('active');
     trackWeightBtn.classList.remove('active');

@@ -34,6 +34,7 @@ async function fetchShrinkflationReddit() {
         const redditUrl = 'https://corsproxy.io/?https://www.reddit.com/r/shrinkflation/top.json?limit=5';
         const response = await fetch(redditUrl);
         const data = await response.json();
+
         if (data.data && data.data.children.length > 0) {
             socialArea.innerHTML = `
                 <ul>
@@ -43,7 +44,9 @@ async function fetchShrinkflationReddit() {
                                 ${post.data.title}
                             </a>
                             <br>
-                            <small>u/${post.data.author} – ${new Date(post.data.created_utc * 1000).toLocaleDateString()}</small>
+                            <small>u/${post.data.author} – 
+                                ${new Date(post.data.created_utc * 1000).toLocaleDateString()}
+                            </small>
                         </li>
                     `).join('')}
                 </ul>`;
@@ -56,56 +59,147 @@ async function fetchShrinkflationReddit() {
     }
 }
 
-async function loadOfficialStats() {
-    const statsArea = document.getElementById('official-stats-area');
+async function loadWorldBankStats(countryCode) {
+    const output = document.getElementById('official-stats-area');
+    output.innerHTML = `<p>Loading data for ${countryCode}...</p>`;
+
     try {
-        const blsApiKey = 'c0e11b8ce20295288f8ca758f282c722d7c44b9649e2257990f00d8e934d6c55';
-        const url = 'https://api.bls.gov/publicAPI/v2/timeseries/data/';
-        const payload = {
-            seriesid: ['CUUR0000SA0'],
-            registrationkey: blsApiKey,
-            latest: true
-        };
+        const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/FP.CPI.TOTL.ZG?format=json`;
+        const res = await fetch(url);
+        const data = await res.json();
 
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-
-        if (!response.ok) throw new Error('BLS API error');
-        const data = await response.json();
-        if (
-            !data ||
-            !data.Results ||
-            !data.Results.series ||
-            !data.Results.series[0] ||
-            !data.Results.series[0].data ||
-            !data.Results.series[0].data[0]
-        ) {
-            statsArea.innerHTML = `<p>No data.</p>`;
+        if (!data[1] || !data[1].length) {
+            output.innerHTML = `<p>No inflation data found for ${countryCode}.</p>`;
             return;
         }
 
-        const cpi = data.Results.series[0].data[0];
-        statsArea.innerHTML = `
+        const latest = data[1].find(e => e.value !== null);
+        const lastFive = data[1].filter(e => e.value !== null).slice(0, 5);
+
+        const avg5yrs = (lastFive.reduce((sum, e) => sum + e.value, 0) / lastFive.length).toFixed(2);
+        const highYear = lastFive.reduce((max, e) => e.value > max.value ? e : max, lastFive[0]);
+        const lowYear = lastFive.reduce((min, e) => e.value < min.value ? e : min, lastFive[0]);
+
+        output.innerHTML = `
             <ul>
-                <li>US Consumer Price Index (CPI): <strong>${cpi.value}</strong></li>
-                <li>Period: <strong>${cpi.periodName} ${cpi.year}</strong></li>
+                <li><strong>Latest Inflation Rate:</strong> ${latest.value.toFixed(2)}%</li>
+                <li><strong>Year:</strong> ${latest.date}</li>
+                <li><strong>Average (last 5 years):</strong> ${avg5yrs}%</li>
+                <li><strong>Highest (last 5 years):</strong> ${highYear.value.toFixed(2)}% (${highYear.date})</li>
+                <li><strong>Lowest (last 5 years):</strong> ${lowYear.value.toFixed(2)}% (${lowYear.date})</li>
             </ul>
-            <small>Source: <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics</a></small>
+            <small>
+                Source: <a href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG" 
+                          target="_blank" rel="noopener">World Bank</a>
+            </small>
         `;
-    } catch (error) {
-        statsArea.innerHTML = `
-            <p>Unable to load official inflation statistics.</p>
-        `;
-        console.error('Error fetching BLS inflation stats:', error);
+    } catch (err) {
+        output.innerHTML = `<p>Error fetching data.</p>`;
+        console.error(err);
     }
 }
 
-// --- Initialize All Sections ---
+const countries = [
+    { code: 'US', name: 'United States' },
+    { code: 'MX', name: 'Mexico' },
+    { code: 'JP', name: 'Japan' },
+    { code: 'GB', name: 'United Kingdom' },
+    { code: 'DE', name: 'Germany' },
+    { code: 'CA', name: 'Canada' },
+    { code: 'FR', name: 'France' },
+    { code: 'IT', name: 'Italy' },
+    { code: 'AU', name: 'Australia' },
+    { code: 'BR', name: 'Brazil' }
+];
+
+function populateCountrySelect() {
+    const select = document.getElementById('country-select');
+    countries.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c.code;
+        opt.textContent = c.name;
+        select.appendChild(opt);
+    });
+}
+
+// --- Modal data ---
+const modalData = {
+    worldBank: {
+        title: "About the World Bank", body: ` <p>The World Bank is an international financial institution that provides loans, grants, and expertise to developing countries.
+    It collects, analyzes, and shares economic data from nearly every nation, which is used by policymakers, researchers, and the public.</p>
+    <p>Can we trust it? The World Bank's data is gathered in cooperation with national statistical authorities and follows internationally recognized standards.
+    However, like all data sources, it can have reporting delays or methodological differences. It’s smart to compare it with other reputable sources too.</p> ` },
+    inflation: {
+        title: "About Inflation", body: ` <p>Inflation is the rate at which the general level of prices for goods and services rises, which reduces the purchasing power of money over time. 
+        It is measured by indicators like the Consumer Price Index (CPI), and it’s a key economic signal watched by governments, businesses, and consumers.</p>
+        <p>Is it good or bad? Moderate inflation, around 2%, is generally considered normal, even positive, for an economy, as it decreases the cost of borrowing, encouraging spending and investment.
+        Very high inflation (like Argentina) or deflation (like some Asian countries) can hinder economic growth. Inflation can sometimes spiral to over 1000% (Venezuela, Zimbabwe), known as hyperinflation, which is devastating.</p> ` }
+};
+
+// --- Create modal HTML ---
+function createModal(id, title, body) {
+    return `
+        <div id="${id}" class="modal" role="dialog" aria-modal="true" aria-labelledby="${id}-title" style="display:none;">
+            <div class="modal-content">
+                <button class="close" data-close="${id}" aria-label="Close">&times;</button>
+                <h3 id="${id}-title">${title}</h3>
+                ${body}
+            </div>
+        </div>
+    `;
+}
+
+// --- Inject modals into page ---
+function injectModals() {
+    const container = document.getElementById('modal-container');
+    container.innerHTML =
+        createModal('modal-world-bank', modalData.worldBank.title, modalData.worldBank.body) +
+        createModal('modal-inflation', modalData.inflation.title, modalData.inflation.body);
+}
+
+function setupModalEvents() {
+    document.getElementById('about-world-bank-btn')
+        .addEventListener('click', () => openModal('modal-world-bank'));
+    document.getElementById('about-inflation-btn')
+        .addEventListener('click', () => openModal('modal-inflation'));
+
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('close')) {
+            closeModal(e.target.getAttribute('data-close'));
+        }
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+        }
+    });
+}
+
+function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    fetchShrinkflationNews();
+    populateCountrySelect();
+
+    const btn = document.getElementById('load-btn');
+    const select = document.getElementById('country-select');
+
+    btn.addEventListener('click', () => {
+        loadWorldBankStats(select.value);
+    });
+
+    loadWorldBankStats(countries[0].code);
     fetchShrinkflationReddit();
-    loadOfficialStats();
+    fetchShrinkflationNews();
+    injectModals();
+    setupModalEvents();
 });
