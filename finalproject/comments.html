@@ -5,10 +5,19 @@
     <meta charset="UTF-8">
     <title>Shrinkflation Sense – Comments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Comments - Shrinkflation Watch">
+    <meta property="og:description" content="Share your experience or report shrinkflation cases.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://enriqueic.github.io/finalproject/comments.html">
+    <meta property="og:image" content="https://enriqueic.github.io/finalproject/images/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/comments.css">
     <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/comments.js" defer></script>
 </head>
 
 <body>
@@ -16,16 +25,16 @@
         <h1>Shrinkflation Watch</h1>
         <div class="navigation-actions">
             <nav>
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="statistics.html">Statistics</a>
-                <a href="comments.html" class="active">Comments</a>
+                <a href="index.html" aria-label="Home page">Home</a>
+                <a href="products.html" aria-label="Products page">Products</a>
+                <a href="statistics.html" aria-label="Statistics page">Statistics</a>
+                <a href="comments.html" class="active" aria-label="Comments page">Comments</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section>
+        <section id="comments">
             <h2>Comments & Reports</h2>
             <form id="comment-form">
                 <label for="user">Name (optional): <input type="text" id="user" name="user"></label><br>
@@ -40,7 +49,7 @@
         <section>
             <h2>User Comments</h2>
             <div id="comments-list">
-            <!-- Comments will be rendered here by JS -->
+                <!-- Comments will be rendered here by JS -->
             </div>
         </section>
     </main>
@@ -50,8 +59,9 @@
             <p>WDD231 Class Project <br> Enrique Ibarra</p>
         </div>
         <div class="footer-col footer-social">
-            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" height="24" style="vertical-align:middle;filter:grayscale(1);opacity:.7;">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub profile">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                    width="24" height="24" style="vertical-align:middle;filter:grayscale(1);opacity:.7;">
             </a>
         </div>
         <div class="footer-information">

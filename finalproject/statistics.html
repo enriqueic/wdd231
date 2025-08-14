@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <title>Shrinkflation Watch – Statistics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Statistics - Shrinkflation Watch">
+    <meta property="og:description" content="Visualize shrinkflation trends and statistics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://enriqueic.github.io/finalproject/statistics.html">
+    <meta property="og:image" content="https://enriqueic.github.io/finalproject/images/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/statistics.js" defer></script>
 </head>
 
 <body>
@@ -16,23 +24,39 @@
         <h1>Shrinkflation Watch</h1>
         <div class="navigation-actions">
             <nav>
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="statistics.html" class="active">Statistics</a>
-                <a href="comments.html">Comments</a>
+                <a href="index.html" aria-label="Home page">Home</a>
+                <a href="products.html" aria-label="Products page">Products</a>
+                <a href="statistics.html" class="active" aria-label="Statistics page">Statistics</a>
+                <a href="comments.html" aria-label="Comments page">Comments</a>
             </nav>
-            <!-- Add nav-related buttons here if needed in the future -->
         </div>
     </header>
 
     <main>
-        <section>
-            <h2>Statistics & Visualizations</h2>
-            <div id="stats-area">
-                <!-- Charts and stats will be rendered here by JS -->
+        <h1>Statistics & News</h1>
+
+        <section id="news-section">
+            <h2>Latest Shrinkflation News</h2>
+            <div id="news-area">
+                <!-- News headlines will be loaded here -->
+            </div>
+        </section>
+
+        <section id="social-section">
+            <h2>Shrinkflation on Social Media</h2>
+            <div id="social-area">
+                <!-- Social media posts will be loaded here -->
+            </div>
+        </section>
+
+        <section id="official-stats-section">
+            <h2>Official Statistics</h2>
+            <div id="official-stats-area">
+                <!-- Official statistics will be loaded here -->
             </div>
         </section>
     </main>
+
     <footer class="site-footer">
         <div class="footer-col footer-contact">
             <strong>Shrinkflation Watch</strong><br>
@@ -40,8 +64,9 @@
 
         </div>
         <div class="footer-col footer-social">
-            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" height="24" style="vertical-align:middle;filter:grayscale(1);opacity:.7;">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub profile">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                    width="24" height="24" style="vertical-align:middle;filter:grayscale(1);opacity:.7;">
             </a>
         </div>
         <div class="footer-information">

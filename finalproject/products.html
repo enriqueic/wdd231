@@ -5,10 +5,19 @@
     <meta charset="UTF-8">
     <title>Shrinkflation Watch – Products</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Products - Shrinkflation Watch">
+    <meta property="og:description" content="Browse and track products affected by shrinkflation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://enriqueic.github.io/finalproject/products.html">
+    <meta property="og:image" content="https://enriqueic.github.io/finalproject/images/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/products.css">
     <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/products.js" defer></script>
 </head>
 
 <body>
@@ -21,12 +30,18 @@
                 <a href="statistics.html">Statistics</a>
                 <a href="comments.html">Comments</a>
             </nav>
-            <!-- Add nav-related buttons here if needed in the future -->
         </div>
     </header>
     <main>
         <section>
             <h2>Products Affected by Shrinkflation</h2>
+            <div id="track-toggle" class="toggle-container">
+                <button id="track-price" class="toggle-btn active">Track Price</button>
+                <button id="track-weight" class="toggle-btn">Track Weight</button>
+            </div>
+            <div id="loading-spinner" style="display:none;">
+                <div class="spinner"></div>
+            </div>
             <div id="product-list">
                 <!-- Product cards will be rendered here by JS -->
             </div>
@@ -40,7 +55,8 @@
         </div>
         <div class="footer-col footer-social">
             <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" height="24" style="vertical-align:middle;filter:grayscale(1);opacity:.7;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                    width="24" height="24" style="vertical-align:middle;filter:grayscale(1);opacity:.7;">
             </a>
         </div>
         <div class="footer-information">
