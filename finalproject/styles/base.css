@@ -88,10 +88,10 @@ img {
 }
 
 /* Mobile layout */
-.site-header {
+h1 {
     background: var(--primary);
     color: #fff;
-    padding: 1rem 0 0.5rem 0;
+    padding: 1rem 0 0.5rem 2rem;
     box-shadow: var(--shadow);
 }
 
