@@ -5,7 +5,7 @@
     --background: #f7fbff;
     --text: #23324b;
     --surface: #fff;
-    --shadow: 0 2px 8px rgba(13,71,161,0.07);
+    --shadow: 0 2px 8px rgba(13, 71, 161, 0.07);
 }
 
 /* Typography */
@@ -22,7 +22,9 @@ html {
     font-size: 16px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -37,7 +39,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--primary);
     margin-top: 0;
@@ -64,12 +71,14 @@ a {
     transition: color 0.2s;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     color: var(--secondary);
     text-decoration: underline;
 }
 
-ul, ol {
+ul,
+ol {
     padding-left: 1.2em;
 }
 
@@ -148,7 +157,9 @@ img {
 }
 
 /* Sections and Cards*/
-section, .card, .surface {
+section,
+.card,
+.surface {
     background: var(--surface);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -157,7 +168,8 @@ section, .card, .surface {
     max-width: 100%;
 }
 
-section h2, .card h2 {
+section h2,
+.card h2 {
     font-family: var(--font-heading);
     color: var(--primary);
     font-size: 1.1rem;
@@ -232,6 +244,7 @@ section h2, .card h2 {
     opacity: 0.7;
     transition: opacity 0.2s;
 }
+
 .footer-social a:hover,
 .footer-social a:focus {
     opacity: 1;
@@ -243,12 +256,16 @@ section h2, .card h2 {
 }
 
 /* Forms*/
-input, textarea, button, select {
+input,
+textarea,
+button,
+select {
     font-family: var(--font-body);
     font-size: 1em;
 }
 
-button, .button {
+button,
+.button {
     background: var(--primary);
     color: #fff;
     border: none;
@@ -259,25 +276,45 @@ button, .button {
     transition: background 0.2s, color 0.2s;
 }
 
-button:hover, .button:hover,
-button:focus, .button:focus {
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
     background: var(--secondary);
     color: var(--primary);
 }
 
 /* Utility*/
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-.mt-2 { margin-top: 2rem; }
-.mb-2 { margin-bottom: 2rem; }
-.p-2 { padding: 2rem; }
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
 
 /* Tablet */
 @media (min-width: 600px) {
     .branding h1 {
         font-size: 2rem;
     }
+
     .site-footer {
         flex-direction: row;
         justify-content: space-between;
@@ -299,7 +336,8 @@ button:focus, .button:focus {
         justify-content: center;
         align-items: stretch;
     }
-    .section-grid > section {
+
+    .section-grid>section {
         flex: 1 1 0;
         min-width: 0;
         max-width: 350px;

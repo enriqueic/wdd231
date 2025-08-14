@@ -1,4 +1,4 @@
-#comments h2{
+#comments h2 {
     text-align: center;
 }
 
@@ -12,7 +12,7 @@
 .comment {
     border-left: 4px solid var(--primary);
     border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(13,71,161,0.06);
+    box-shadow: 0 1px 4px rgba(13, 71, 161, 0.06);
     padding: 0.8em 1em 0.7em 1.2em;
     position: relative;
     transition: background 0.2s;

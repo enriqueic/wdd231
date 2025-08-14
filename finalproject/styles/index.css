@@ -56,31 +56,39 @@
 
 /* Tablet */
 @media (min-width: 600px) {
-    .hero, section{
+
+    .hero,
+    section {
         max-width: 600px;
         margin: 2rem auto 1.5rem auto;
         padding: 2rem 2rem;
     }
+
     .hero h2 {
         font-size: 1.5rem;
     }
+
     .cta-buttons {
         flex-direction: row;
         justify-content: center;
         gap: 1rem;
     }
-    
+
 }
 
 /* Desktop */
 @media (min-width: 900px) {
-    .hero, section {
+
+    .hero,
+    section {
         max-width: 700px;
         padding: 2.5rem 2.5rem;
     }
+
     .hero h2 {
         font-size: 2rem;
     }
+
     .section-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -90,7 +98,8 @@
         margin: 2rem auto;
         max-width: 1200px;
     }
-    .section-grid > section {
+
+    .section-grid>section {
         width: 100%;
         max-width: 350px;
         margin: 0;
