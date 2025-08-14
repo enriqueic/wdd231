@@ -95,7 +95,7 @@ img {
     box-shadow: var(--shadow);
 }
 
-.branding h1 {
+h1 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     margin: 0 0 0.2em 0;
