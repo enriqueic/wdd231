@@ -13,12 +13,13 @@
     <meta property="og:description" content="Track, visualize, and report shrinkflation in your favorite products.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://enriqueic.github.io/finalproject/">
-    <meta property="og:image" content="https://enriqueic.github.io/finalproject/images/og-image.jpg">
+    <meta property="og:image" content="images/og-image.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/index.css">
     <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/comments.js" defer></script>
 </head>
 
 <body>
@@ -47,6 +48,25 @@
                 <li>How can I check if a product I buy has been affected by shrinkflation?</li>
                 <li>How do I report a new case of shrinkflation I have noticed?</li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Comments & Reports</h2>
+            <form id="comment-form">
+                <label for="user">Name (optional): <input type="text" id="user" name="user"></label><br>
+                <label for="comment">Comment or Report:<br>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                </label><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+
+        <section>
+            <h2>User Comments</h2>
+            <div id="comments-list">
+            <!-- Comments will be rendered here by JS -->
+            </div>
         </section>
 
     </main>
