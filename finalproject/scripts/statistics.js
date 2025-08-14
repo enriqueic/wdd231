@@ -1,4 +1,4 @@
-const newsApiKey = '58e1953737d541fe9f8ce2c53f1c011e'; 
+const newsApiKey = '58e1953737d541fe9f8ce2c53f1c011e';
 const newsUrl = `https://corsproxy.io/?https://newsapi.org/v2/everything?q=shrinkflation&sortBy=publishedAt&language=en&pageSize=5&apiKey=${newsApiKey}`;
 
 async function fetchShrinkflationNews() {
