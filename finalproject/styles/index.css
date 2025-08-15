@@ -194,6 +194,10 @@ main {
     color: #fff;
 }
 
+.footer-social{
+    padding-left: 2.5rem;
+}
+
 /* Tablet */
 @media (min-width: 600px) {
 
