@@ -116,6 +116,11 @@
     font-size: 1rem;
 }
 
+#track-toggle button{
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem;
+}
+
 @media (max-width: 600px) {
     #product-list {
         grid-template-columns: 1fr;
