@@ -250,6 +250,7 @@ section h2,
 
 .footer-social a img {
     vertical-align: middle;
+    justify-self: center;
     width: 22px;
     height: 22px;
     opacity: 0.8;
