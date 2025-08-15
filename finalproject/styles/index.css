@@ -15,6 +15,10 @@ main {
     padding: 0;
 }
 
+.hidden{
+    display: none;
+}
+
 .cta-buttons {
     margin-top: 1.2rem;
     display: flex;
