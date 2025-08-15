@@ -249,11 +249,15 @@ section h2,
     margin: 0.5em 0;
 }
 
+.footer-social{
+    padding-left: 1rem;
+}
+
 .footer-social a img {
     vertical-align: middle;
     justify-self: center;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     opacity: 0.8;
     transition: opacity 0.2s;
 }
