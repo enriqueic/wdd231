@@ -20,21 +20,25 @@
     <link rel="stylesheet" href="styles/products.css">
     <script src="scripts/getdate.js" defer></script>
     <script src="scripts/products.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
 </head>
 
 <body>
-    <header>
+    <header class="nav-container">
+        <div class="branding">Shrinkflation Watch</div>
+        <nav id="main-nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active" aria-current="page">Products</a>
+            <a href="statistics.html">Statistics</a>
+        </nav>
+        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
-
     <main>
         <h1>Shrinkflation Watch</h1>
-        <div class="navigation-actions">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="products.html" class="active">Products</a>
-                <a href="statistics.html">Statistics</a>
-            </nav>
-        </div>
         <section>
             <h2>Products Affected by Shrinkflation</h2>
             <div id="track-toggle" class="toggle-container">

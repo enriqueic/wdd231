@@ -23,8 +23,10 @@
 </head>
 
 <body>
-        <h1>Shrinkflation Watch</h1>
+    <header>
+    </header>
     <main>
+        <h1>Shrinkflation Watch</h1>
         <section class="hero">
             <h2>Purpose</h2>
             <p>Shrinkflation Watch helps you track, visualize, inform yourself, and report changes in product sizes and
@@ -34,10 +36,10 @@
                     personalized watch-list!</li>
                 <li><b>Visualize Trends:</b> Explore statistics and charts about product changes over time.</li>
             </ul>
-            <div class="cta-buttons">
-                <a href="products.html" class="cta" aria-label="Browse Products page">Browse Products</a>
-                <a href="statistics.html" class="cta alt" aria-label="See Statistics page">See Statistics</a>
-            </div>
+            <nav class="cta-buttons" aria-label="Main">
+                <a href="products.html" class="cta">Products</a>
+                <a href="statistics.html" class="cta alt">Statistics</a>
+            </nav>
         </section>
 
         <section>
@@ -61,14 +63,12 @@
             </form>
         </section>
 
-
         <section>
             <h2>User Comments</h2>
             <div id="comments-list">
             <!-- Comments will be rendered here by JS -->
             </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
@@ -86,7 +86,6 @@
             <p id="lastModified"></p>
         </div>
     </footer>
-    <script src="scripts/getdate.js"></script>
 </body>
 
 </html>

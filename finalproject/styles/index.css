@@ -1,3 +1,20 @@
+.nav-container {
+    display: none;
+}
+
+h1{
+    display: block;
+}
+
+.index-page #main-nav,
+.index-page .hamburger {
+    display: none !important;
+}
+
+main {
+    padding: 0;
+}
+
 .cta-buttons {
     margin-top: 1.2rem;
     display: flex;
@@ -18,11 +35,18 @@
     box-shadow: var(--shadow);
     border: none;
     display: inline-block;
+    outline: none;
 }
 
 .cta.alt {
     background: var(--secondary);
     color: var(--primary);
+}
+
+.cta.active,
+.cta[aria-current="page"] {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
 }
 
 .cta:hover,
@@ -54,7 +78,7 @@
     padding-bottom: 0.5rem;
 }
 
-#comments h2{
+#comments h2 {
     text-align: center;
 }
 
@@ -185,7 +209,7 @@
         justify-content: center;
         gap: 1rem;
     }
-        #comment-form {
+    #comment-form {
         padding: 1em 0.5em;
         max-width: 100%;
     }

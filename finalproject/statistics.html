@@ -20,23 +20,27 @@
     <link rel="stylesheet" href="styles/statistics.css">
     <script src="scripts/getdate.js" defer></script>
     <script src="scripts/statistics.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
 </head>
 
 <body>
-    <header>
+<body>
+    <header class="nav-container">
+        <div class="branding">Shrinkflation Watch</div>
+        <nav id="main-nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="statistics.html" class="active" aria-current="page">Statistics</a>
+        </nav>
+        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
-
     <main>
         <h1>Shrinkflation Watch</h1>
-        <div class="navigation-actions">
-            <nav>
-                <a href="index.html" aria-label="Home page">Home</a>
-                <a href="products.html" aria-label="Products page">Products</a>
-                <a href="statistics.html" class="active" aria-label="Statistics page">Statistics</a>
-            </nav>
-        </div>
         <h2>Statistics & News</h2>
-
         <section id="news-section">
             <h2>Latest Shrinkflation News</h2>
             <div id="news-area">
