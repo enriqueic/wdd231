@@ -1,0 +1,10 @@
+{
+  "worldBank": {
+    "title": "About the World Bank",
+    "body": "<p>The World Bank is an international financial institution that provides loans, grants, and expertise to developing countries. It collects, analyzes, and shares economic data from nearly every nation, which is used by policymakers, researchers, and the public.</p><p>Can we trust it? The World Bank's data is gathered in cooperation with national statistical authorities and follows internationally recognized standards. However, like all data sources, it can have reporting delays or methodological differences. It’s smart to compare it with other reputable sources too.</p>"
+  },
+  "inflation": {
+    "title": "About Inflation",
+    "body": "<p>Inflation is the rate at which the general level of prices for goods and services rises, which reduces the purchasing power of money over time. It is measured by indicators like the Consumer Price Index (CPI), and it’s a key economic signal watched by governments, businesses, and consumers.</p><p>Is it good or bad? Moderate inflation, around 2%, is generally considered normal, even positive, for an economy, as it decreases the cost of borrowing, encouraging spending and investment. Very high inflation (like Argentina) or deflation (like some Asian countries) can hinder economic growth. Inflation can sometimes spiral to over 1000% (Venezuela, Zimbabwe), known as hyperinflation, which is devastating.</p>"
+  }
+}
