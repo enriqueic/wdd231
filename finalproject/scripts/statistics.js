@@ -1,3 +1,4 @@
+import { setupHamburgerMenu, setupFooterDate} from './utils.js';
 import { loadWorldBankStats, populateCountrySelect, countries, fetchShrinkflationNews, fetchShrinkflationReddit } from './news.js';
 import { loadModalData, injectModals, setupModalEvents } from './modal.js';
 
@@ -19,4 +20,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadModalData();
     injectModals();
     setupModalEvents();
+    setupHamburgerMenu();
+    setupFooterDate();
 });

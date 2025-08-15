@@ -1,3 +1,67 @@
+// Hamburger menu utility
+export function setupHamburgerMenu(hamburgerId = "hamburger", navId = "main-nav") {
+    const hamburger = document.getElementById(hamburgerId);
+    const nav = document.getElementById(navId);
+
+    if (hamburger && nav) {
+        hamburger.addEventListener("click", () => {
+            const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+            hamburger.setAttribute("aria-expanded", !isExpanded);
+            nav.classList.toggle("active");
+        });
+    }
+}
+
+// Footer date utility
+export function setupFooterDate(yearId = "year", lastModId = "lastModified") {
+    const yearSpan = document.getElementById(yearId);
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+    const lastMod = document.getElementById(lastModId);
+    if (lastMod) {
+        lastMod.textContent = "Last Modified: " + document.lastModified;
+    }
+}
+
+// Comments utility
+export function setupComments(formId = 'comment-form', listId = 'comments-list') {
+    const form = document.getElementById(formId);
+    const commentsList = document.getElementById(listId);
+
+    if (!form || !commentsList) return;
+
+    let comments = JSON.parse(localStorage.getItem('comments')) || [];
+    renderComments();
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const user = document.getElementById('user').value.trim() || 'Anonymous';
+        const comment = document.getElementById('comment').value.trim();
+        if (!comment) return;
+
+        const newComment = {
+            user,
+            comment,
+            date: new Date().toLocaleString()
+        };
+        comments.unshift(newComment);
+        localStorage.setItem('comments', JSON.stringify(comments));
+        renderComments();
+        form.reset();
+    });
+
+    function renderComments() {
+        commentsList.innerHTML = comments.map(c => `
+            <div class="comment">
+                <strong>${c.user}</strong> <span class="date">${c.date}</span>
+                <p>${c.comment}</p>
+            </div>
+        `).join('');
+    }
+}
+
+
 // DOM helpers
 export const showElement = id => {
     const el = typeof id === 'string' ? document.getElementById(id) : id;

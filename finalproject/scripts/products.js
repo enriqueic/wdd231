@@ -1,4 +1,4 @@
-import { fetchJSON, showSpinner, hideSpinner, getFavorites, setFavorites, getProductHistory, setProductHistory } from './utils.js';
+import { fetchJSON, showSpinner, hideSpinner, getFavorites, setFavorites, getProductHistory, setProductHistory, setupHamburgerMenu, setupFooterDate } from './utils.js';
 import { renderProducts, shuffleArray } from './products-render.js';
 
 let trackingMode = localStorage.getItem('trackingMode') || 'price';
@@ -193,3 +193,8 @@ if (trackingMode === 'price') {
 }
 
 fetchAndRenderProducts();
+
+document.addEventListener("DOMContentLoaded", () => {
+    setupHamburgerMenu();
+    setupFooterDate();
+});
