@@ -35,11 +35,9 @@ export function setupComments(formId = 'comment-form', listId = 'comments-list')
     renderComments();
 
     form.addEventListener('submit', function (e) {
-        e.preventDefault();
         const user = document.getElementById('user').value.trim() || 'Anonymous';
         const comment = document.getElementById('comment').value.trim();
         if (!comment) return;
-
         const newComment = {
             user,
             comment,
@@ -47,8 +45,6 @@ export function setupComments(formId = 'comment-form', listId = 'comments-list')
         };
         comments.unshift(newComment);
         localStorage.setItem('comments', JSON.stringify(comments));
-        renderComments();
-        form.reset();
     });
 
     function renderComments() {
