@@ -26,26 +26,10 @@ export function setupFooterDate(yearId = "year", lastModId = "lastModified") {
 
 // Comments utility
 export function setupComments(formId = 'comment-form', listId = 'comments-list') {
-    const form = document.getElementById(formId);
     const commentsList = document.getElementById(listId);
-
-    if (!form || !commentsList) return;
 
     let comments = JSON.parse(localStorage.getItem('comments')) || [];
     renderComments();
-
-    form.addEventListener('submit', function (e) {
-        const user = document.getElementById('user').value.trim() || 'Anonymous';
-        const comment = document.getElementById('comment').value.trim();
-        if (!comment) return;
-        const newComment = {
-            user,
-            comment,
-            date: new Date().toLocaleString()
-        };
-        comments.unshift(newComment);
-        localStorage.setItem('comments', JSON.stringify(comments));
-    });
 
     function renderComments() {
         commentsList.innerHTML = comments.map(c => `
